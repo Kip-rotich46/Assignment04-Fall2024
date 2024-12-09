@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Library Management
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Form Container -->
+  <div id="form-container">
+    <!-- Book Entry Form -->
+    <form id="book-entry-form" [formGroup]="bookForm">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title class="book-entry-title">Book Entry Form</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <!-- Input Fields -->
+      <ion-item class="input-group">
+        <ion-label position="floating" class="input-label">Serial Number</ion-label>
+        <ion-input formControlName="serialNo" type="number" class="input-field" placeholder="Enter Serial Number"></ion-input>
+      </ion-item>
+
+      <ion-item class="input-group">
+        <ion-label position="floating" class="input-label">Book Title</ion-label>
+        <ion-input formControlName="bookTitle" class="input-field" placeholder="Enter Book Title"></ion-input>
+      </ion-item>
+
+      <ion-item class="input-group">
+        <ion-label position="floating" class="input-label">Author Name</ion-label>
+        <ion-input formControlName="authorName" class="input-field" placeholder="Enter Author's Name"></ion-input>
+      </ion-item>
+
+      <!-- Buttons -->
+      <ion-button expand="full" (click)="addBook()" [disabled]="!bookForm.valid" class="add-button">
+        ADD
+      </ion-button>
+      <ion-button expand="full" (click)="checkBook()" [disabled]="!bookForm.get('serialNo')?.valid" class="check-button">
+        CHECK
+      </ion-button>
+      <ion-button expand="full" (click)="updateBook()" [disabled]="!bookForm.valid" class="update-button">
+        UPDATE
+      </ion-button>
+      <ion-button expand="full" (click)="removeBook()" [disabled]="!bookForm.get('serialNo')?.valid" class="remove-button">
+        REMOVE
+      </ion-button>
+    </form>
+
+    <!-- API Response Section -->
+    <div class="response-section">
+      <h3>API Response</h3>
+      <p *ngIf="responseMessage" [ngClass]="{ 'success-response': isSuccess, 'error-response': !isSuccess }">
+        {{ responseMessage }}
+      </p>
+
+      <!-- Display Book Details if Available -->
+      <div *ngIf="responseDetails">
+        <p><strong>Serial No:</strong> {{ responseDetails.serialNo }}</p>
+        <p><strong>Book Title:</strong> {{ responseDetails.bookTitle }}</p>
+        <p><strong>Author Name:</strong> {{ responseDetails.authorName }}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,260 @@
+/* Form Container */
+#form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 70%; /* Adjust container width */
+  height: auto;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#book-entry-form {
+  width: 60%; /* Ensure form takes up 60% of the container width */
+  height: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Book Entry Form Title */
+.book-entry-title {
+  background-color: white; /* No background color */
+  color: rgb(6, 185, 245); /* Text color */
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+/* Label Styling (Floating Labels) */
+.input-label {
+  color: white !important; /* White color for labels */
+  // background-color: black !important; /* Black background for labels */
+  font-weight: bold;
+  padding: 5px;
+  margin-bottom: 10px;
+  z-index: 1; /* Make sure label is above input field */
+  position: relative; /* Ensure the label stays on top */
+  top: -10px; /* Position the label on top of the input */
+}
+
+/* Input Fields Styling */
+.input-field {
+  background-color: black; /* Input background color */
+  color: white; /* Text color inside input */
+  padding: 12px;
+  width: 100%; /* Ensure input fields take full width inside the form container */
+  border-radius: 5px; /* Rounded corners for inputs */
+  // border: 1px solid #ccc; /* Subtle border around input fields */
+  box-sizing: border-box;
+  margin-top: 10px;
+  z-index: 0; 
+}
+
+
+
+/* Styling for All Input Fields (Serial Number, Book Title, Author Name) */
+ion-item {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+
+
+/* Serial Number Styling */
+.serial-label {
+  background-color: black;
+  color: white; /* Label text color */
+  padding: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.serial-input {
+  background-color: black; /* Input background color */
+  color: white; /* Text color inside input */
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  // border: 1px solid #ccc;
+}
+
+// /* Input Fields Styling */
+// .input-field {
+//   background-color: black;
+//   color: white;
+//   padding: 12px;
+//   width: 100%; /* Ensure input fields take full width inside the form container */
+//   border-radius: 5px; /* Rounded corners for inputs */
+//   // border: 1px solid #ccc; /* Subtle border around input fields */
+//   box-sizing: border-box; /* Ensure padding doesn't affect the width */
+// }
+
+/* Input Label Styling */
+/* Label Styling (Above the Input Fields) */
+
+
+/* Error Message Styling */
+ion-text {
+  margin-top: 5px;
+  font-size: 12px;
+  color: red; /* Red color for error messages */
+}
+
+/* Add some spacing for inputs and focus effects */
+ion-input {
+  width: 100%;
+}
+
+/* Error Message Styling */
+ion-text {
+  margin-top: 5px;
+  font-size: 12px;
+  color: red; /* Red color for error messages */
+}
+
+/* Add some spacing for inputs and focus effects */
+ion-input {
+  width: 100%;
+}
+
+/* Buttons Styling */
+.add-button,
+.check-button,
+.update-button,
+.remove-button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px; /* Rounded corners */
+  background-color: transparent; /* Remove default background color */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+  box-shadow: none; /* Remove any box shadow */
+  outline: none !important; /* Remove the outline */
+  border: none !important; /* Remove default border */
+}
+
+/* Specific button colors */
+.add-button {
+  background-color: lightblue;
+  color: white;
+}
+
+.add-button:disabled {
+  background-color: #b3d9ff;
+}
+
+.check-button {
+  background-color: purple;
+  color: white;
+}
+
+.check-button:disabled {
+  background-color: #d1b3ff;
+}
+
+.update-button {
+  background-color: yellow;
+  color: black;
+}
+
+.update-button:disabled {
+  background-color: #ffff99;
+}
+
+.remove-button {
+  background-color: red;
+  color: white;
+}
+
+.remove-button:disabled {
+  background-color: #ffcccc;
+}
+
+/* Fix to remove blue shading when focused or active */
+.add-button:focus,
+.add-button:active,
+.check-button:focus,
+.check-button:active,
+.update-button:focus,
+.update-button:active,
+.remove-button:focus,
+.remove-button:active {
+  outline: none !important; /* Remove outline */
+  background-color: inherit !important; /* Ensure background stays the same */
+  box-shadow: none !important; /* Remove any box-shadow */
+}
+
+/* Error Message Styling */
+ion-text {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+
+/* API Response Section */
+.response-section {
+  margin-top: 30px; /* Add top margin for spacing */
+  padding: 15px;
+  background-color: #f1f1f1; /* Light background */
+  color: #050505;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Response Message Text */
+.response-section h3 {
+  font-size: 18px;
+  color: #050505;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.success-response {
+  color: green;
+}
+
+.error-response {
+  color: red;
+}
+
+.response-section p {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Book Details Styling */
+.response-section div {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.response-section div p {
+  margin: 5px 0;
+}
+
+.response-section div strong {
+  font-weight: bold;
+}

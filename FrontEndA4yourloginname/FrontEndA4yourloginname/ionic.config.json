@@ -1,0 +1,7 @@
+{
+  "name": "FrontEndA4yourloginname",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
